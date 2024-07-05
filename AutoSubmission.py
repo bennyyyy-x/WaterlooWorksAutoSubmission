@@ -5,8 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 url = "https://waterlooworks.uwaterloo.ca/waterloo.htm?action=login"
-username = ""
-password = ""
+username = input("Please enter your username: ")
+password = input("Please enter your password: ")
 
 driver = webdriver.Firefox()
 driver.get(url)
@@ -35,9 +35,9 @@ WebDriverWait(driver, 60).until(
     EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/header/div[2]/div/div/div/div/a"))
 )
 driver.fullscreen_window()
-driver.find_element(By.XPATH, "/html").screenshot("homepage.png")
+# driver.find_element(By.XPATH, "/html").screenshot("homepage.png")
 
 # Open Jobs Page
 driver.get("https://waterlooworks.uwaterloo.ca/myAccount/co-op/full/jobs.htm")
-driver.find_element(By.XPATH, "/html").screenshot("jobs_page.png")
+# driver.find_element(By.XPATH, "/html").screenshot("jobs_page.png")
 
