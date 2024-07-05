@@ -5,8 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 url = "https://waterlooworks.uwaterloo.ca/waterloo.htm?action=login"
-username = "b24xu@uwaterloo.ca"
-password = 'Xjl20050918!'
+username = ""
+password = ""
 
 driver = webdriver.Firefox()
 driver.get(url)
